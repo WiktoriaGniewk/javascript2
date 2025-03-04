@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zadanie 31 - Obiekt Mebel</title>
+    <title>Zadanie 31</title>
     <script type="text/javascript">
         var Mebel = {
             rodzaj: 'Szafa',
             material: 'Drewno',
             kolor: 'Brązowy',
-            styl: 'Klasyczny',
-            
             Mebel_wyswietl_gniewkowska: function () {
-                document.getElementById("output").innerHTML =
+                document.write(
                     'Obiekt: Mebel<br>' +
                     'Pola:<br>' +
                     'Rodzaj: ' + this.rodzaj + '<br>' +
                     'Materiał: ' + this.material + '<br>' +
                     'Kolor: ' + this.kolor + '<br>' +
-                    'Metoda: Mebel_wyswietl_gniewkowska<br>';
-            },
-
-            Mebel_pokaz_gniewkowska: function() {
-                document.getElementById("output").innerHTML +=
-                    '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
-                    'Nowa metoda: Mebel_pokaz_gniewkowska<br>';
+                    'Metoda: Mebel_wyswietl_gniewkowska' + '<br>' +
+                    'Nowe pole: cena = ' + this.cena + ' zł' + '<br>' +
+                    'Nowa metoda: Mebel_pokaz_gniewkowska'
+                );
             }
         };
-
-        function wyswietlInformacje() {
-            document.getElementById("output").innerHTML =
-                'Programowanie obiektowe.<br>' +
-                'Obiekt: Mebel<br>' +
-                'Pola:<br>' +
-                '- rodzaj<br>' +
-                '- material<br>' +
-                '- kolor<br>' +
-                'Metoda: Mebel_wyswietl_gniewkowska<br>' +
-                'Nowe pole: styl<br>' +
-                'Nowa metoda: Mebel_pokaz_gniewkowska<br>';
-        }
+        
+        Mebel.cena = 1200;
+        Mebel.Mebel_pokaz_gniewkowska = function() {
+            alert('Cena mebla: ' + this.cena + ' zł');
+        };
     </script>
 </head>
 <body>
     <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
-    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż nowe pole</button>
-    <button onclick="wyswietlInformacje()">Pokaż informacje o obiekcie</button>
-    <div id="output"></div> <!-- Miejsce na wyświetlanie danych -->
+    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż cenę</button>
 </body>
 </html>
-
