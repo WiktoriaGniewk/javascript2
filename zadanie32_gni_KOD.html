@@ -1,1 +1,75 @@
 
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_gniewkowska()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+    <form>
+    <textarea name="gniewkowska" cols="80" rows="20" readonly>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 32</title>
+    <script type="text/javascript">
+
+        function Mebel(rodzaj, material, kolor) {
+            this.rodzaj = rodzaj;
+            this.material = material;
+            this.kolor = kolor;
+        }
+
+
+        Mebel.prototype.wyswietlDane = function() {
+            document.write(
+                'Obiekt: Mebel<br>' +
+                'Pola:<br>' +
+                'Rodzaj: ' + this.rodzaj + '<br>' +
+                'Materiał: ' + this.material + '<br>' +
+                'Kolor: ' + this.kolor + '<br>'
+            );
+        };
+
+
+        var mebel1 = new Mebel('Szafa', 'Drewno', 'Brązowy');
+        var mebel2 = new Mebel('Stół', 'Szkło', 'Czarny');
+        var mebel3 = new Mebel('Krzesło', 'Metal', 'Szary');
+
+
+        Mebel.prototype.styl = 'Nowoczesny';
+
+
+        Mebel.prototype.pokazStyl = function() {
+            document.write('Styl mebla: ' + this.styl + '<br>');
+        };
+
+
+        function wyswietlWszystkieMebele() {
+            mebel1.wyswietlDane();
+            mebel2.wyswietlDane();
+            mebel3.wyswietlDane();
+        }
+
+
+        function wyswietlStylWszystkichMebeli() {
+            mebel1.pokazStyl();
+            mebel2.pokazStyl();
+            mebel3.pokazStyl();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="wyswietlWszystkieMebele()">Wyświetl dane wszystkich mebli</button>
+    <button onclick="wyswietlStylWszystkichMebeli()">Pokaż styl wszystkich mebli</button>
+</body>
+</html>
+    </textarea>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_gniewkowska()"/>
+    <script type="text/javascript">
+    </script>
+    </body>
+    </html>
