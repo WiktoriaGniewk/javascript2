@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title> Zadanie 18 </title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div style="color:navy;font-size:50px;">
+        <script language="JavaScript">
+            var a_gni = parseFloat(prompt("a=", ""));
+            var b_gni = parseFloat(prompt("b=", ""));
+            function dodawanie_gni(a_gni, b_gni) {
+                return a_gni + b_gni;
+            }
+            function odejmowanie_gni(a_gni, b_gni) {
+                return a_gni - b_gni;
+            }
+            function mnozenie_gni(a_gni, b_gni) {
+                return a_gni * b_gni;
+            }
+            function od_kwadratu_gni(a_gni, b_gni) {
+                return (a_gni * a_gni)+ (b_gni * b_gni);
+            }         
+            document.write("suma=" + dodawanie_gni(a_gni, b_gni) + "<br>");
+            document.write("odejmowanie=" + odejmowanie_gni(a_gni, b_gni) + "<br>");
+            document.write("mnozenie=" + mnozenie_gni(a_gni, b_gni) + "<br>");
+            document.write("do kwadratu=" + od_kwadratu_gni(a_gni, b_gni) + "<br>");
+        </script>
+    </div>
+</body>
+
+</html>
