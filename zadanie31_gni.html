@@ -3,7 +3,7 @@
 <head>
     <title>Zadanie 31 - Obiekt Mebel</title>
     <script type="text/javascript">
-        // Definiowanie obiektu Mebel
+
         var Mebel = {
             rodzaj: 'Szafa',
             material: 'Drewno',
@@ -20,10 +20,9 @@
             }
         };
 
-        // Dodanie nowej właściwości poza ciałem obiektu
+
         Mebel.styl = 'Klasyczny';
 
-        // Dodanie nowej metody poza ciałem obiektu
         Mebel.Mebel_pokaz_gniewkowska = function() {
             document.write(
                 '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
@@ -31,7 +30,7 @@
             );
         };
 
-        // Funkcja do wyświetlania nazwy obiektu, pól, metod oraz nowych pól i metod
+
         function wyswietlInformacje() {
             document.write(
                 'Programowanie obiektowe.<br>' +
