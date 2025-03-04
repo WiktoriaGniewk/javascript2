@@ -13,7 +13,7 @@ window.close()
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zadanie 31</title>
+    <title>Obiekt Mebel</title>
     <script type="text/javascript">
         var Mebel = {
             rodzaj: 'Szafa',
@@ -26,14 +26,25 @@ window.close()
                     'Rodzaj: ' + this.rodzaj + '<br>' +
                     'Materiał: ' + this.material + '<br>' +
                     'Kolor: ' + this.kolor + '<br>' +
-                    'Metoda: Mebel_wyswietl_gniewkowska'
+                    'Metoda: Mebel_wyswietl_gniewkowska'<br>
                 );
             }
+        };
+        
+ 
+        Mebel.styl = 'Klasyczny';
+        Mebel.Mebel_pokaz_gniewkowska = function() {
+            document.write(
+                '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
+                'Nowa metoda: Mebel_pokaz_gniewkowska'
+            );
         };
     </script>
 </head>
 <body>
     <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
+    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż nowe pole</button>
+    <button onclick="document.write('<pre>' + JSON.stringify(Mebel, null, 2) + '</pre>')">Pokaż KOD</button>
 </body>
 </html>
     </textarea>
