@@ -1,21 +1,8 @@
-<html>
-<head>
-<script type="text/javascript">
-function okno_zamknij_gniewkowska()
-{
-window.close()
-}
-</script>
-</head>
-<body>
-    <form>
-    <textarea name="gniewkowska" cols="80" rows="20" readonly>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zadanie 31 - Obiekt Mebel</title>
+    <title>Zadanie 31</title>
     <script type="text/javascript">
-        // Definiowanie obiektu Mebel
         var Mebel = {
             rodzaj: 'Szafa',
             material: 'Drewno',
@@ -27,47 +14,21 @@ window.close()
                     'Rodzaj: ' + this.rodzaj + '<br>' +
                     'Materiał: ' + this.material + '<br>' +
                     'Kolor: ' + this.kolor + '<br>' +
-                    'Metoda: Mebel_wyswietl_gniewkowska<br>'
+                    'Metoda: Mebel_wyswietl_gniewkowska' + '<br>' +
+                    'Nowe pole: cena = ' + this.cena + ' zł' + '<br>' +
+                    'Nowa metoda: Mebel_pokaz_gniewkowska'
                 );
             }
         };
-
-        // Dodanie nowej właściwości poza ciałem obiektu
-        Mebel.styl = 'Klasyczny';
-
-        // Dodanie nowej metody poza ciałem obiektu
+        
+        Mebel.cena = 1200;
         Mebel.Mebel_pokaz_gniewkowska = function() {
-            document.write(
-                '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
-                'Nowa metoda: Mebel_pokaz_gniewkowska<br>'
-            );
+            alert('Cena mebla: ' + this.cena + ' zł');
         };
-
-        // Funkcja do wyświetlania nazwy obiektu, pól, metod oraz nowych pól i metod
-        function wyswietlInformacje() {
-            document.write(
-                'Programowanie obiektowe.<br>' +
-                'Obiekt: Mebel<br>' +
-                'Pola:<br>' +
-                '- rodzaj<br>' +
-                '- material<br>' +
-                '- kolor<br>' +
-                'Metoda: Mebel_wyswietl_gniewkowska<br>' +
-                'Nowe pole: styl<br>' +
-                'Nowa metoda: Mebel_pokaz_gniewkowska<br>'
-            );
-        }
     </script>
 </head>
 <body>
     <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
-    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż nowe pole</button>
-    <button onclick="wyswietlInformacje()">Pokaż informacje o obiekcie</button>
+    <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż cenę</button>
 </body>
 </html>
-    </textarea>
-    <input type="button" value="zamknij okno" onclick="okno_zamknij_gniewkowska()"/>
-    <script type="text/javascript">
-    </script>
-    </body>
-    </html>
