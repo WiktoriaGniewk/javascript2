@@ -1,26 +1,26 @@
-<html> 
-     <head> 
-           <script type="text/javascript"> 
-                 var mebel = { 
-   typ: 'biurko',
-   kolor: 'jasnobrazowy', 
-   tworzywo: 'drewno' ,
-   mebel_wyswietl_gniewkowska: function () 
-     { 
-        document.write(this.typ + ' ' + this.kolor + ', ' + this.tworzywo); 
-     } 
-  } 
-  mebel.mebel_wyswietl_gniewkowska(); 
-     </script> 
-     </head> 
-<body> 
- <br> 
-   Programowanie obiektowe. <br> 
-     Obiekt  to  mebel<br> 
-     Pola: <br> 
-     typ<br> 
-     kolor<br>  
-     tworzywo<br> 
-     metoda:  mebel_wyswietl_gniewkowska<br> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 30</title>
+    <script type="text/javascript">
+        var Mebel = {
+            rodzaj: 'Szafa',
+            material: 'Drewno',
+            kolor: 'Brązowy',
+            Mebel_wyswietl_gniewkowska: function () {
+                document.write(
+                    'Obiekt: Mebel<br>' +
+                    'Pola:<br>' +
+                    'Rodzaj: ' + this.rodzaj + '<br>' +
+                    'Materiał: ' + this.material + '<br>' +
+                    'Kolor: ' + this.kolor + '<br>' +
+                    'Metoda: Mebel_wyswietl_gniewkowska'
+                );
+            }
+        };
+    </script>
+</head>
+<body>
+    <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
+</body>
+</html>
