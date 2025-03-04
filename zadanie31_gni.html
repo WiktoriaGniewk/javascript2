@@ -3,36 +3,31 @@
 <head>
     <title>Zadanie 31 - Obiekt Mebel</title>
     <script type="text/javascript">
-
         var Mebel = {
             rodzaj: 'Szafa',
             material: 'Drewno',
             kolor: 'Brązowy',
+            styl: 'Klasyczny',
+            
             Mebel_wyswietl_gniewkowska: function () {
-                document.write(
+                document.getElementById("output").innerHTML =
                     'Obiekt: Mebel<br>' +
                     'Pola:<br>' +
                     'Rodzaj: ' + this.rodzaj + '<br>' +
                     'Materiał: ' + this.material + '<br>' +
                     'Kolor: ' + this.kolor + '<br>' +
-                    'Metoda: Mebel_wyswietl_gniewkowska<br>'
-                );
+                    'Metoda: Mebel_wyswietl_gniewkowska<br>';
+            },
+
+            Mebel_pokaz_gniewkowska: function() {
+                document.getElementById("output").innerHTML +=
+                    '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
+                    'Nowa metoda: Mebel_pokaz_gniewkowska<br>';
             }
         };
 
-
-        Mebel.styl = 'Klasyczny';
-
-        Mebel.Mebel_pokaz_gniewkowska = function() {
-            document.write(
-                '<br>Nowe pole: Styl - ' + this.styl + '<br>' +
-                'Nowa metoda: Mebel_pokaz_gniewkowska<br>'
-            );
-        };
-
-
         function wyswietlInformacje() {
-            document.write(
+            document.getElementById("output").innerHTML =
                 'Programowanie obiektowe.<br>' +
                 'Obiekt: Mebel<br>' +
                 'Pola:<br>' +
@@ -41,8 +36,7 @@
                 '- kolor<br>' +
                 'Metoda: Mebel_wyswietl_gniewkowska<br>' +
                 'Nowe pole: styl<br>' +
-                'Nowa metoda: Mebel_pokaz_gniewkowska<br>'
-            );
+                'Nowa metoda: Mebel_pokaz_gniewkowska<br>';
         }
     </script>
 </head>
@@ -50,5 +44,7 @@
     <button onclick="Mebel.Mebel_wyswietl_gniewkowska()">Wyświetl dane</button>
     <button onclick="Mebel.Mebel_pokaz_gniewkowska()">Pokaż nowe pole</button>
     <button onclick="wyswietlInformacje()">Pokaż informacje o obiekcie</button>
+    <div id="output"></div> <!-- Miejsce na wyświetlanie danych -->
 </body>
 </html>
+
